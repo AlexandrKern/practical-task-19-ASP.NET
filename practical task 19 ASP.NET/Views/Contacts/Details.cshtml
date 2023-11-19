@@ -1,0 +1,25 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Телефонная книга";
+    <h1>Телефонная книга</h1>
+}
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Номер телефона</th>
+        <th>Адрес</th>
+        <th>Описание</th>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td> @Model.LastName</td>
+        <td> @Model.Name</td>
+        <td> @Model.MiddleName</td>
+        <td> @Model.PhoneNumber</td>
+        <td> @Model.Address</td>
+        <td> @Model.Description</td>
+    </tr>
+</table>

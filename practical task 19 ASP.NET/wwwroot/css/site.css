@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bodoni MT';
+}
+
+header {
+    width: 100%;
+    padding: 15px 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #b200ff;
+    border-bottom: 2px solid #ff00dc;
+}
+
+    header.logo {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    header nav a {
+        color: aqua;
+        text-decoration: none;
+        margin-left: 15px;
+    }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+main {
+    padding: 15px 10%;
+    margin: 50px 0;
+}
+
+table {
+    border: 1px solid grey;
+    width: 100%;
+    width: 600px;
+}
+
+th {
+    border: 1px solid grey;
+}
+
+td {
+    border: 1px solid grey;
+}
