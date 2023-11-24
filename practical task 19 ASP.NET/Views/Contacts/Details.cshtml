@@ -22,4 +22,12 @@
         <td> @Model.Address</td>
         <td> @Model.Description</td>
     </tr>
+    
 </table>
+<form asp-controller="Contacts" asp-action="Delete" method="post" asp-route-id="@Model.ID">
+    <input type="submit" value="Удалить" /><br />
+</form> <br />
+<form asp-controller="Contacts" asp-action="Update" method="post" asp-route-id="@Model.ID">
+    <input type="submit" value="Изменить" />
+</form>
+

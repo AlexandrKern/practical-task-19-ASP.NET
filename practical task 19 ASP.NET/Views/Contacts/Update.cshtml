@@ -1,0 +1,31 @@
+﻿@model Contact
+<form method="post" action="~/Contacts/UpdateDb">
+    <input type="hidden" asp-for="ID" />
+    <p>
+        <label asp-for="LastName">Фамилия</label><br />
+        <input type="text" asp-for="LastName" />
+    </p>
+    <p>
+        <label asp-for="Name">Имя</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="MiddleName">Отчество</label><br />
+        <input type="text" asp-for="MiddleName" />
+    </p>
+    <p>
+        <label asp-for="PhoneNumber">Номер телефона</label><br />
+        <input type="number" asp-for="PhoneNumber" />
+    </p>
+    <p>
+        <label asp-for="Address">Адресс</label><br />
+        <input type="text" asp-for="Address" />
+    </p>
+    <p>
+        <label asp-for="Description">Опсиание</label><br />
+        <input type="text" asp-for="Description" />
+    </p>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>

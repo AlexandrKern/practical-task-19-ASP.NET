@@ -1,0 +1,18 @@
+﻿@model Contact
+<form method="post" action="~/Contacts/AddContactDb">
+	<label>Фамилия</label>
+	<input type="text" name="lastName" /><br />
+	<label>Имя</label>
+	<input type="text" name="name" /><br />
+	<label>Отчество</label>
+	<input type="text" name="middleName" /><br />
+	<label>Номер телефлна</label>
+	<input type="text" name="phoneNumber" /><br />
+	<label>Адресс</label>
+	<input type="text" name="address" /><br />
+	<label>Описание</label>
+	<input type="text" name="description" /><br />
+	<p>
+		<input type="submit" value="Сохранить" />
+	</p>
+</form>

@@ -1,6 +1,5 @@
 ﻿@model List<Contact>
 @{
-
     ViewData["Title"] = "Телефонная книга";
     <h1>Телефонная книга</h1>
 }
@@ -25,3 +24,7 @@
         }
     </tbody>
 </table>
+<form asp-controller="Contacts" asp-action="AddContact">
+    <input type="submit" value="Добавить" />
+</form>
+
