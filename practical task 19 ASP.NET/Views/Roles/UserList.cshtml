@@ -1,0 +1,17 @@
+﻿@model IEnumerable<practical_task_19_ASP.NET.Models.User>
+
+<h2>Список пользователей</h2>
+<table class="table">
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Права доступа</a>
+            </td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="DeleteUser" asp-route-userid="@user.Id">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>

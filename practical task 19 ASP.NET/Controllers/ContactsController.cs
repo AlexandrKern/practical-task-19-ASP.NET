@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using practical_task_19_ASP.NET.DataContext;
 using practical_task_19_ASP.NET.Models;
@@ -21,6 +22,7 @@ namespace practical_task_19_ASP.NET.Controllers
 		{
             return View(contacts);
 		}
+		[Authorize]
 		public IActionResult Details(int id)
 		{
 			contact = contacts.FirstOrDefault(c => c.ID == id);
@@ -35,7 +37,8 @@ namespace practical_task_19_ASP.NET.Controllers
 			db.SaveChanges();
             return Redirect("~/");
 		}
-		public IActionResult AddContact()
+        [Authorize]
+        public IActionResult AddContact()
 		{
 			return View();
 		}
@@ -57,8 +60,8 @@ namespace practical_task_19_ASP.NET.Controllers
 				Description=description
 			});
 			db.SaveChanges();
-			return Redirect("~/");
-		}
+            return RedirectToAction("Index", "Contacts");
+        }
         [HttpPost]
         public IActionResult Update(int id)
 		{

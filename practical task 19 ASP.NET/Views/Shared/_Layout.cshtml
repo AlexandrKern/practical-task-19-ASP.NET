@@ -11,9 +11,31 @@
 <body>
     <header>
         <span class="logo"> Телефонная книга</span>
-        <nav>
-            <a href="/">Главная</a>
-        </nav>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <nav>
+                <a href="/Account/Login">Войти</a>
+                <a href="/Account/Register/">Зарегистрироваться</a>
+            </nav>
+        }
+        else
+        {
+            <p>
+                @User.Identity.Name
+            </p>
+            <nav>
+                <a href="/">Главная</a>
+            </nav>
+            <form method="post" asp-controller="Account" asp-action="Logout">
+                <input type="submit" value="Выход" />
+            </form>
+        }
+        @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+        {
+            <form asp-controller="Roles" asp-action="Index">
+                <input type="submit" value="Управление сайтом" />
+            </form>
+        }
     </header>
     <main>
         @RenderBody()
