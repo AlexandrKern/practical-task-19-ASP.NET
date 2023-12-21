@@ -6,7 +6,7 @@ namespace practical_task_19_ASP.NET.DataContext
 {
     public class Context:DbContext
     {
-        public DbSet<Contact> contacts {  get; set; }
+        public DbSet<Contact> contacts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; 

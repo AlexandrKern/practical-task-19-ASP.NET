@@ -37,7 +37,6 @@ namespace practical_task_19_ASP.NET.Controllers
             }
             return View(name);
         }
-
         [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
@@ -48,7 +47,6 @@ namespace practical_task_19_ASP.NET.Controllers
             }
             return RedirectToAction("Index");
         }
-
         public IActionResult UserList() => View(_userManager.Users.ToList());
 
         public async Task<IActionResult> Edit(string userId)

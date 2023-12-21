@@ -1,10 +1,10 @@
-﻿using Api.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using MyApi.Models;
 using System.Collections.Generic;
 
-namespace Api
+namespace MyApi.Data
 {
-    public class Context : DbContext
+    public class DataContacts: DbContext
     {
         public DbSet<Contact> contacts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -26,8 +26,8 @@
 </table>
 @if (ViewContext.HttpContext.User.IsInRole("Admin"))
 {
-    <form asp-controller="Contacts" asp-action="Delete" method="post" asp-route-id="@Model.ID">
-        <input type="submit" value="Удалить" /><br />
+    <form asp-controller="Contacts" asp-action="Delete" method="post"  asp-route-id="@Model.ID">
+        <input  type="submit" value="Удалить" /><br />
     </form>
     <br />
     <form asp-controller="Contacts" asp-action="Update" method="post" asp-route-id="@Model.ID">

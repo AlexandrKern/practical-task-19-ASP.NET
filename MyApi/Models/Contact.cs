@@ -1,4 +1,4 @@
-﻿namespace Api.Models
+﻿namespace MyApi.Models
 {
     public class Contact
     {

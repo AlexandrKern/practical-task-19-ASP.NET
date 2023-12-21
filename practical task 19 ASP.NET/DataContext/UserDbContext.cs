@@ -11,6 +11,5 @@ namespace practical_task_19_ASP.NET.DataContext
         {
             Database.EnsureCreated();
         }
-      
     }
 }
